@@ -1,0 +1,135 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Movie Card Styles */
+.movie-card {
+    margin-bottom: 30px;
+    perspective: 1000px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.movie-card .card {
+    background: #2c2c2c;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.movie-card .card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.movie-card .card:hover img {
+    transform: scale(1.1);
+}
+
+.movie-card .card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.movie-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #ff416c;
+    transition: color 0.3s ease;
+}
+
+.movie-card p {
+    font-size: 1rem;
+    color: #b3b3b3;
+    margin: 10px 0;
+}
+
+.movie-card .btn {
+    background: #ff416c;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.movie-card .btn:hover {
+    background: #ff4b2b;
+    transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .movie-card {
+        margin-bottom: 20px;
+    }
+}
